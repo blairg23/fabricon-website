@@ -4,9 +4,9 @@
         'ui.bootstrap',   //: Provides Twitter BootStrap compatibility.
         'ui.router'   //: State-based routing of the application.
     ]);
-	
+
     app.config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/products");
 
         $stateProvider
             .state('home', {
@@ -92,7 +92,7 @@
             restrict: "E",
             templateUrl: "./templates/custom-footer.html"
         };
-    });  
+    });
     //- FOOTER
 
     //+ SITE MAP
@@ -101,12 +101,12 @@
             restrict: "E",
             templateUrl: "./templates/site-map.html"
         };
-    });  
+    });
     app.directive("siteMapSocial", function() {
         return {
             restrict: "E",
             templateUrl: "./templates/site-map-social.html"
         };
-    });  
+    });
 //- SITE MAP
 })();
