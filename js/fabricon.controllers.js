@@ -6,7 +6,7 @@ ui.controller('NavigationBarController', ['$scope', '$state',
             $(".nav li").removeClass("active");
             $(this).addClass("active");
         });
-        
+
         var nav_buttons = $(".nav li");
         for (var i = 0; i < nav_buttons.length; i++) {
             var nav_button = nav_buttons[i];
@@ -21,31 +21,31 @@ ui.controller('NavigationBarController', ['$scope', '$state',
 
 ui.controller('HomeController', ['$scope', '$state',
     function($scope, $state) {
-        console.log("Home page!");   
+        console.log("Home page!");
     }
 ]);
 
 ui.controller('AboutController', ['$scope', '$state',
     function($scope, $state) {
-        console.log("About page!");   
+        console.log("About page!");
     }
 ]);
 
 ui.controller('ContactController', ['$scope', '$state',
     function($scope, $state) {
-        console.log("Contact page!");   
+        console.log("Contact page!");
     }
 ]);
 
 ui.controller('TypeController', ['$scope', '$state',
     function($scope, $state) {
-        console.log("Type page!", $state);   
+        console.log("Type page!", $state);
     }
 ]);
 
 ui.controller('StyleController', ['$scope', '$state',
     function($scope, $state) {
-        console.log("Style page!", $state);   
+        console.log("Style page!", $state);
     }
 ]);
 
@@ -106,7 +106,7 @@ ui.controller('ProductsController', ['$rootScope', '$scope', '$http', '$state',
                     style_directory = split_Cap_join(style_directory, ' ', '%20');
                     //- Format Data URL.
 
-                    data_json_path = './home/'+type_directory+'/'+style_directory+'/'+toParams.style+'.json';    
+                    data_json_path = './home/'+type_directory+'/'+style_directory+'/'+toParams.style+'.json';
                 }
             } else {
                 data_json_path = './home/home.json';
@@ -136,7 +136,7 @@ ui.controller('ProductsController', ['$rootScope', '$scope', '$http', '$state',
                 var row = $scope.tiles[i];
                 for (var j = 0; j < row.length; j++) {
                     var tile = row[j];
-                    
+
                     console.log("LINK NAME:", tile.link_name);
                     tile.type = tile.link_name;
 
@@ -155,7 +155,7 @@ ui.controller('ProductsController', ['$rootScope', '$scope', '$http', '$state',
             $scope.main_gallery.images.full.size = {};
             $scope.main_gallery.images.full.size.height = 50;
             $scope.main_gallery.images.full.size.width = 100;
-            
+
             //+ Populate Main Gallery.
             var gallery_images = [];
             for (var i = 0; i < $scope.tiles.length; i++) {
@@ -169,10 +169,11 @@ ui.controller('ProductsController', ['$rootScope', '$scope', '$http', '$state',
 
                     for (var k = 0; k < full_size_category_images.length; k++) {
                         var full_size_category_image_name = full_size_category_images[k];
-                        
+
                         var gallery_image = {
                             'image_folder_path': image_folder_path,
-                            'name': full_size_category_image_name
+                            'name': full_size_category_image_name,
+                            'category' : tile.link_name
                         };
 
                         gallery_images.push(gallery_image);
@@ -184,7 +185,7 @@ ui.controller('ProductsController', ['$rootScope', '$scope', '$http', '$state',
             //- Populate Main Gallery.
         };
 
-        g_refresh_navigator = function() { 
+        g_refresh_navigator = function() {
             $http.get(data_json_path).success(refresh_navigator);
         };
 
@@ -199,7 +200,7 @@ var configure_type_dropdown = function($state, categories) {
         $( '#sifter-type-container-dropdown' ).empty();
         for (var i = 0; i < categories.length; i++) {
             var category_row = categories[i];
-            
+
             for (var j = 0; j < category_row.length; j++) {
                 var category = category_row[j];
                 $( '#sifter-type-container-dropdown' ).append('<li><a href="">'+category.name+'</a></li>')
@@ -213,20 +214,20 @@ var configure_type_dropdown = function($state, categories) {
         var type_text = event.target.innerText;
         console.log(type_text);
         $('#sifter-type-button').text(type_text);
-        $("#sifter-type-button").css("font-weight", "bold");  
+        $("#sifter-type-button").css("font-weight", "bold");
         $('#sifter-type-button').append("&nbsp;<span class='caret'></span>");
-        
+
         $('#sifter-style-button').text("Style");
-        $("#sifter-style-button").css("font-weight", "bold");  
+        $("#sifter-style-button").css("font-weight", "bold");
         $('#sifter-style-button').append("&nbsp;<span class='caret'></span>");
-        $("#sifter-style-button").prop("disabled", false);  
-    
+        $("#sifter-style-button").prop("disabled", false);
+
         $("#sifter-traits-button").text("Traits");
-        $("#sifter-traits-button").css("font-weight", "bold");  
+        $("#sifter-traits-button").css("font-weight", "bold");
 
         reset_traits_dropdown();
-        $("#sifter-traits-button").prop("disabled", true);  
-    
+        $("#sifter-traits-button").prop("disabled", true);
+
         data_json_path = '../fabricon-test/home/'+type_text+'/'+type_text.toLowerCase()+'.json';
         console.log(data_json_path);
         editing_type = false;
@@ -244,7 +245,7 @@ var configure_style_dropdown = function($state, categories) {
         $( '#sifter-style-container-dropdown' ).empty();
         for (var i = 0; i < categories.length; i++) {
             var category_row = categories[i];
-            
+
             for (var j = 0; j < category_row.length; j++) {
                 var category = category_row[j];
                 $( '#sifter-style-container-dropdown' ).append('<li><a href="">'+category.name+'</a></li>')
@@ -253,21 +254,21 @@ var configure_style_dropdown = function($state, categories) {
     }
 
     if (style_click_set === true) { return; }
-  
+
     $( '#sifter-style-container-dropdown a' ).on( 'click', function( event ) {
         var style_text = event.target.innerText;
         console.log(style_text);
         $('#sifter-style-button').text(style_text);
-        $("#sifter-style-button").css("font-weight", "bold");  
+        $("#sifter-style-button").css("font-weight", "bold");
         $('#sifter-style-button').append("&nbsp;<span class='caret'></span>");
-        
+
         $("#sifter-traits-button").text("Traits");
-        $("#sifter-traits-button").css("font-weight", "bold");  
+        $("#sifter-traits-button").css("font-weight", "bold");
         $('#sifter-traits-button').append("&nbsp;<span class='caret'></span>");
 
         reset_traits_dropdown();
-        $("#sifter-traits-button").prop("disabled", false); 
-    
+        $("#sifter-traits-button").prop("disabled", false);
+
         $state.go('products.type.style', {'style': style_text.toLowerCase()});
     });
 
@@ -276,7 +277,7 @@ var configure_style_dropdown = function($state, categories) {
 
 var configure_traits_dropdown = function($state) {
     var options = [];
- 
+
     $( '#sifter-traits-container-dropdown a' ).on( 'click', function( event ) {
 
        var $target = $( event.currentTarget ),
@@ -293,9 +294,9 @@ var configure_traits_dropdown = function($state) {
        }
 
        $( event.target ).blur();
-          
+
        console.log( options );
-      
+
        $state.go('products.type.style.traits', {'traits': options});
 
        return false;
@@ -313,6 +314,6 @@ var reset_traits_dropdown = function() {
         }
 
         console.log(trait);
-    }    
+    }
 };
 //- DROPDOWN
