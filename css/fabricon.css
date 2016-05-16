@@ -73,17 +73,18 @@ nav {
   margin: 0%; }
 
 #navbar-menu-items {
-  text-align: center;
+  /*text-align: center;*/
   width: 100%; }
 
 #navbar-menu-items > li {
   text-align: center;
-  padding-left: 11.25%;
+  padding-left: 5%;
+   padding-right: 5%;
   font-weight: bold;
   font-size: 1.5em; }
 
 #navbar {
-  text-align: center; }
+  /*text-align: center;*/ }
 
 .nolinks img {
   text-decoration: none;
@@ -267,6 +268,8 @@ nav {
   display: table;
   width: 90%;
   opacity: 0.9;
+  /*margin-top: 2%;*/ 
+
   /*margin-top: 2%;*/ }
 
 #navigator-container:hover {
@@ -365,3 +368,13 @@ nav {
 /** - SITE MAP */
 
 /*# sourceMappingURL=fabricon.css.map */
+.navbar-fixed {
+text-align: center; 
+  position: fixed;
+  top:0;
+  /*left:0;*/
+  height: 25px;
+    padding-left: 5%;
+  padding-right: 5%;
+  
+  }

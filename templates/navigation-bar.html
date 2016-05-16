@@ -39,3 +39,28 @@
 		</div>
 	</div>
 </nav>
+<script>
+		  var offset = 120
+		$(function() {	
+			$('#nav').affix({
+      offset: {
+        top: 0
+      }
+});
+			
+				$(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+   
+    if ($(window).scrollTop() > offset) {
+		 console.log($(window).scrollTop())
+      $('#navbar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < offset) {
+		console.log($(window).scrollTop())
+      $('#navbar').removeClass('navbar-fixed');
+    }
+  });
+		});
+  </script>
