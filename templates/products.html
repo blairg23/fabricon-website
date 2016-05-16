@@ -5,7 +5,7 @@
         <slide ng-repeat="full_sized_image in main_gallery.images.full.images">
 <a class="nolinks" ui-sref="type({type: full_sized_image['category']})">
           <img class='gallery-carousel-slide-img' ng-src="{{full_sized_image['image_folder_path'] + '/full/' + full_sized_image['name']}}" style="height:{{main_gallery.images.full.size.height}}%; width: 75%;" />
-</a>
+    </a>
           <div>
             WHY..   {{full_sized_image['category']}}
           </div>
@@ -21,7 +21,7 @@
     <div id="navigator-header" class="page-header">
       <h1 >Products</h1>
     </div>
-    <div id="sifter-container">
+    <!--<div id="sifter-container">
       <div id="sifter-filter-container">
         <div class="dropdown sifter-filter">
           <button id="sifter-type-button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -54,7 +54,7 @@
           <li><a href="" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp;Option 6</a></li>
         </ul>
       </div>
-    </div>
+    </div>-->
   </div>
   <div class="row snippet-row vdivide" ng-repeat="row in tiles">
     <hr>
@@ -77,9 +77,9 @@
           </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class='snippet-tagline-container'>
+          <!--<div class='snippet-tagline-container'>
 
-          </div>
+          </div>-->
           <div class='snippet-body-container'>
             {{tile.content}}
 

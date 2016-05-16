@@ -19,11 +19,137 @@ ui.controller('NavigationBarController', ['$scope', '$state',
     }
 ]);
 
-ui.controller('HomeController', ['$scope', '$state',
-    function($scope, $state) {
-        console.log("Home page!");
+
+ui.controller('HomeController', ['$rootScope', '$scope', '$http', '$state',
+    function($rootScope, $scope, $http, $state) {
+
+        var products_state_change_start = function(event, toState, toParams, fromState, fromParams) {
+            console.log("event:", event);
+            console.log("toState:", toState);
+            console.log("toParams:", toParams);
+            console.log("fromState:", fromState);
+            console.log("fromParams:", fromParams);
+
+            //+ Set Data Source based on application "state".
+            if ((toParams === null) || (toParams.type === undefined)) {
+                data_json_path = './home/home.json';
+            } else if (toParams !== fromParams) {
+                if (toParams.type !== undefined) {
+                    type = toParams.type;
+
+                    //+ Format Data URL.
+                    var type_directory = toParams.type;
+                    type_directory = split_Cap_join(type_directory, '-', '-');
+                    type_directory = split_Cap_join(type_directory, '_', '%20');
+                    type_directory = split_Cap_join(type_directory, ' ', '%20');
+                    //- Format Data URL.
+
+                    data_json_path = './home/'+type_directory+'/'+toParams.type+'.json';
+                }
+
+                if ((toParams.type !== undefined) && (toParams.style !== undefined)) {
+                    //+ Format Data URL.
+                    var type_directory = toParams.type;
+                    type_directory = split_Cap_join(type_directory, '-', '-');
+                    type_directory = split_Cap_join(type_directory, '_', '%20');
+                    type_directory = split_Cap_join(type_directory, ' ', '%20');
+                    //- Format Data URL.
+
+                    //+ Format Data URL.
+                    var style_directory = toParams.style;
+                    style_directory = split_Cap_join(style_directory, '-', '-');
+                    style_directory = split_Cap_join(style_directory, '_', '%20');
+                    style_directory = split_Cap_join(style_directory, ' ', '%20');
+                    //- Format Data URL.
+
+                    data_json_path = './home/'+type_directory+'/'+style_directory+'/'+toParams.style+'.json';
+                }
+            } else {
+                data_json_path = './home/home.json';
+            }
+            //- Set Data Source based on application "state".
+
+            console.log(data_json_path);
+            g_refresh_navigator();
+        };
+
+        //+ This gets called every time the Products page is interacted with.
+        $rootScope.$on('$stateChangeStart', products_state_change_start);
+        //-
+
+        $scope.main_gallery = {};
+
+        var refresh_navigator = function(data) {
+            console.log("STATE TYPE:", $state.params.type);
+            console.log("STATE STYLE:", $state.params.style);
+            console.log("STATE TRAITS:", $state.params.traits);
+            $scope.tiles = data;
+
+            console.log($scope);
+
+            //+ Set tile properties.
+            for (var i = 0; i < $scope.tiles.length; i++) {
+                var row = $scope.tiles[i];
+                for (var j = 0; j < row.length; j++) {
+                    var tile = row[j];
+
+                    console.log("LINK NAME:", tile.link_name);
+                    tile.type = tile.link_name;
+
+                    if ($state.params.type !== undefined) {
+                        tile.type = $state.params.type;
+                        tile.style = tile.link_name;
+                    }
+
+                    row[j] = tile;
+                }
+            }
+            //- Set tile properties.
+
+            $scope.main_gallery.images = {};
+            $scope.main_gallery.images.full = {};
+            $scope.main_gallery.images.full.size = {};
+            $scope.main_gallery.images.full.size.height = 50;
+            $scope.main_gallery.images.full.size.width = 100;
+
+            //+ Populate Main Gallery.
+            var gallery_images = [];
+            for (var i = 0; i < $scope.tiles.length; i++) {
+                var row = $scope.tiles[i];
+                for (var j = 0; j < row.length; j++) {
+                    var tile = row[j];
+
+                    var image_folder_path = tile['image_folder_path'];
+                    tile['image_folder_path'] = image_folder_path;
+                    var full_size_category_images = tile.images.full.images;
+
+                    for (var k = 0; k < full_size_category_images.length; k++) {
+                        var full_size_category_image_name = full_size_category_images[k];
+
+                        var gallery_image = {
+                            'image_folder_path': image_folder_path,
+                            'name': full_size_category_image_name,
+                            'category' : tile.link_name
+                        };
+
+                        gallery_images.push(gallery_image);
+                    }
+                }
+            }
+
+            $scope.main_gallery.images.full.images = gallery_images;
+            //- Populate Main Gallery.
+        };
+
+        g_refresh_navigator = function() {
+            $http.get(data_json_path).success(refresh_navigator);
+        };
+
+        console.log("Once: products_state_change_start");
+        products_state_change_start(null, $state, $state.params, $state, null);
     }
 ]);
+
 
 ui.controller('AboutController', ['$scope', '$state',
     function($scope, $state) {
