@@ -378,3 +378,6 @@ text-align: center;
   padding-right: 5%;
   
   }
+  #method1 b {
+    display:none;
+}
