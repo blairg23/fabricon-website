@@ -157,6 +157,12 @@ ui.controller('AboutController', ['$scope', '$state',
     }
 ]);
 
+ui.controller('ResourcesController', ['$scope', '$state',
+    function($scope, $state) {
+        console.log("ResourceController page!");
+    }
+]);
+
 ui.controller('ContactController', ['$scope', '$state',
     function($scope, $state) {
         console.log("Contact page!");

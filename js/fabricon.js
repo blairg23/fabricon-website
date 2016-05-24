@@ -6,7 +6,7 @@
     ]);
 
     app.config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/products");
+        $urlRouterProvider.otherwise("/home");
 
         $stateProvider
             .state('home', {
@@ -45,6 +45,15 @@
                     }
                 }
             })
+            .state('resources', {
+                url: "/resources",
+                views: {
+                    'content': {
+                        templateUrl: './templates/resources.html',
+                        controller: 'ResourcesController'
+                    }
+                }
+            })
             .state('type', {
                 url: "/:type",
                 views: {
@@ -62,7 +71,8 @@
                         controller: 'ProductsController'
                     }
                 }
-            });
+            }) ;
+            
             // .state('products.type.style', {
             //     url: "/:style",
             //     templateUrl: './templates/products.types.styles.html',
