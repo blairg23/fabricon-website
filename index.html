@@ -16,7 +16,8 @@
 		<link rel="SHORTCUT ICON" href="./img/logos/mt_logo_transparent_favicon.png">
 
 		<!-- Third Party CSS -->
-		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<!-- XL resolution support for BootStrap grid. -->
 		<link rel="stylesheet" type="text/css" href="css/col_xl.css" />
@@ -26,11 +27,12 @@
 
 		<!-- JavaScript -->
 		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script type="text/javascript" src="./js/libs/jquery-ui.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="./js/libs/jquery.lightbox.js"></script>
 		<!-- Angular -->
-		<script type="text/javascript" src="./js/libs/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 		<script type="text/javascript" src="./js/libs/angular-route.min.js"></script>
 		
 		<!-- Application -->
@@ -57,19 +59,32 @@
             ga('send', 'pageview');
 			
 
+			// Obfuscate the telephone number and email address:
+			var s="=b!isfg>#nbjmup;gbcsjdpoAnpoubob/dpn#?gbcsjdpoAnpoubob/dpn=0b?";
+			m=""; for (i=0; i<s.length; i++) m+=String.fromCharCode(s.charCodeAt(i)-1);document.getElementById('method1').innerHTML=(m);
+
+			var s="=b!isfg>#ufm;,25178399411#?)517*!839.9411=0b?";
+			m=""; for (i=0; i<s.length; i++) m+=String.fromCharCode(s.charCodeAt(i)-1); document.getElementById('method2').innerHTML=(m);
 			
         </script>
+
+		<noscript>
+			You must enable JavaScript to see this text.
+		</noscript>
+
 	</head>
 
 	<body role="document" ng-cloak>
     	<navigation-bar></navigation-bar>
 		<div id="master-content" role="main">
-			<div class="content-container" ui-view="content"></div>
+			<div class="content-container" ui-view="content">
+
+			</div>
 			<!--<site-map></site-map>	-->
-		</div>
+		</div> 
 		<footer>
 			<h6 class="centered nolinks">Copyright © <script>document.write(new Date().getFullYear());</script> Fabricon, LLC. All Rights Reserved <address>1021 Ronan Street, Missoula, MT. 59801</address> <a href="tel:+14067288300">(406) 728-8300</a> | <a href="mailto:fabricon@montana.com">fabricon@montana.com</a> | Designed by <a href="http://evinozer.com">Evin Özer</a> and <a href="http://blairgemmer.com">Blair Gemmer</a></h6>
-		</footer>	
+		</footer>
 	</body>
 </html>
 

@@ -3,3 +3,6 @@
 
 # Data files:
 /home/*
+
+# Backup files:
+/backups/*
