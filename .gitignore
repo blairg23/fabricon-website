@@ -2,7 +2,13 @@
 *.DS_Store
 
 # Data files:
-/home/*
+angularjs/home/*
 
 # Backup files:
-/backups/*
+angularjs/backups/*
+
+# Virtual environment files:
+flask/venv/*
+
+# Python-specific files:
+.pyc

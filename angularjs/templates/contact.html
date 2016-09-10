@@ -1,0 +1,127 @@
+<div class="container-fluid fabricon-page">
+<!--     <script type="text/javascript">
+        $(document).ready(function(){
+            //Convert address tags to google map links - Michael Jasper 2012
+            $('address').each(function () {
+                var link = "<a href='http://maps.google.com/maps?q=" + encodeURIComponent( $(this).text() ) + "' target='_blank'>" + $(this).text() + "</a>";
+                $(this).html(link);
+            });
+            
+            $("map-address").each(function(){                         
+                var embed ="<iframe width='425' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q="+ encodeURIComponent( $(this).text() ) +"&amp;output=embed'></iframe>";
+                $(this).html(embed);             
+            });
+            
+            // Name can't be blank
+            $('#contact_name').on('input', function() {
+                var input=$(this);
+                var is_name=input.val();
+                if(is_name){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+
+            // Subject line can't be blank
+            $('#contact_subject').on('input', function() {
+                var input=$(this);
+                var is_name=input.val();
+                if(is_name){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+
+            // Email must be an email
+            $('#contact_email').on('input', function() {
+                var input=$(this);
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                var is_email=re.test(input.val());
+                if(is_email){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+
+            // Website must be a website
+            $('#contact_website').on('input', function() {
+                var input=$(this);
+                if (input.val().substring(0,4)=='www.'){input.val('http://www.'+input.val().substring(4));}
+                var re = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])?/;
+                var is_url=re.test(input.val());
+                if(is_url){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}
+            });
+
+            // Message can't be blank
+            $('#contact_message').keyup(function(event) {
+                var input=$(this);
+                var message=$(this).val();
+                console.log(message);
+                if(message){input.removeClass("invalid").addClass("valid");}
+                else{input.removeClass("valid").addClass("invalid");}   
+            });
+
+            // After Form Submitted Validation
+            $("#contact_submit button").click(function(event){
+                var form_data=$("#contact").serializeArray();
+                var error_free=true;
+                for (var input in form_data){
+                    var element=$("#contact_"+form_data[input]['name']);
+                    var valid=element.hasClass("valid");
+                    var error_element=$("span", element.parent());
+                    if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+                    else{error_element.removeClass("error_show").addClass("error");}
+                }
+                if (!error_free){
+                    event.preventDefault();                    
+                }
+                else{                    
+                    // alert('No errors: Form will be submitted');
+                }
+            });
+        });
+    </script> -->
+    <script type="text/javascript">
+        $("#contact_form").validate();
+    </script>
+
+    <div class="page-header">
+        <h1>Contact Us</h1>
+    </div>  
+    <div class="page-content">        
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            </div>
+            
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <iframe class="contact_map" width='425' height='350' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=1021 Ronan Street, Missoula, MT. 59801&amp;output=embed'></iframe>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="form_div">
+                    <form method="post" name="contact" id="contact_form" action="https://formspree.io/bill23@mailinator.com">
+                        <div>                            
+                            <input type="text" id="contact_name" name="name" placeholder="Full Name" minlength="2" required>
+                            <span class="error">This field is required.</span>
+                        </div>
+                        <div>                            
+                            <input type="email" id="contact_email" name="_replyto" placeholder="address@email.com" required>
+                            <span class="error">A valid email address is required.</span>
+                        </div>
+                        <div>                            
+                            <input type="text" id="contact_subject" name="_subject" placeholder="Subject" required>
+                            <span class="error">This field is required.</span>
+                        </div>
+                        <div>                            
+                            <textarea id="contact_message" name="message" placeholder="Type a message here..." required></textarea>
+                            <span class="error">This field is required.</span>
+                        </div>
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <div id="contact_submit">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form> 
+                </div> 
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            </div>
+        </div>        
+    </div>
+</div>
+
