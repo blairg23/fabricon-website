@@ -5,14 +5,17 @@ import json
 
 @app.route('/')
 @app.route('/index')
+@app.route('/home')
 def index():
 	page = {
 			"title": "Home Page",
 			"jumbotron": "Welcome to Fabricon!",
-			"imgs": [
+			"images": [
 						"/static/img/1.jpg",
 						"/static/img/2.jpg",
-						"/static/img/3.jpg"
+						"/static/img/3.jpg",
+						"/static/img/4.jpg",
+						"/static/img/5.jpg"
 					]
 	}
 	return render_template(

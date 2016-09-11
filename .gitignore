@@ -11,4 +11,4 @@ angularjs/backups/*
 flask/venv/*
 
 # Python-specific files:
-.pyc
+*.pyc

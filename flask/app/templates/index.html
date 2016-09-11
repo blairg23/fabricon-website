@@ -17,9 +17,9 @@
 		<li data-target="#myCarousel" data-slide-to="2"></li>
 	  </ol>
 	  <div class="carousel-inner" role="listbox">		
-		{% for img in page.imgs %}
+		{% for image in page.images %}
 			<div class="item{% if loop.index == 1 %} active{% endif %}">
-				<img src={{img}} />
+				<img src={{image}} />
 			</div>
 		{% endfor %}
 
