@@ -7,17 +7,9 @@ import json
 @app.route('/index')
 @app.route('/home')
 def index():
-	page = {
-			"title": "Home Page",
-			"jumbotron": "Welcome to Fabricon!",
-			"images": [
-						"/static/img/1.jpg",
-						"/static/img/2.jpg",
-						"/static/img/3.jpg",
-						"/static/img/4.jpg",
-						"/static/img/5.jpg"
-					]
-	}
+	with open('app/data/pages.json', 'r') as infile:
+		data = json.load(infile)
+	page = data['page']
 	return render_template(
 							'index.html',
 							page=page							
