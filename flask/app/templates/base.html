@@ -29,16 +29,16 @@
 		<![endif]-->
 
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link href="static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="/static/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 		
 		<!-- Custom styles for this template -->
-	<link href="static/css/carousel.css" rel="stylesheet">
+	<link href="/static/css/carousel.css" rel="stylesheet">
 
 	<!-- Fabricon-specific styles -->
-	<link href="static/css/fabricon.css" rel="stylesheet">
+	<link href="/static/css/fabricon.css" rel="stylesheet">
 
 	<!-- Favicon -->
-	<link rel="SHORTCUT ICON" href="static/img/logos/mt_logo_transparent_favicon.png">
+	<link rel="SHORTCUT ICON" href="/static/img/logos/mt_logo_transparent_favicon.png">
 	</head>
 
 	<body role="document">
@@ -47,10 +47,10 @@
 				<div class="navbar-header">
 					<div class="fabricon-brand-motto">					
 						<a href="/">
-							<img class="fabricon-brand" src="static/img/logos/mt_logo_lg_transparent_all.png" />
+							<img class="fabricon-brand" src="/static/img/logos/mt_logo_lg_transparent_all.png" />
 						</a>
-						<img class="fabricon-motto" src="static/img/logos/fabricon_motto_white.png" />
-						<img class="made-in-montana-logo" src="static/img/logos/made_in_montana.png" />
+						<img class="fabricon-motto" src="/static/img/logos/fabricon_motto_white.png" />
+						<img class="made-in-montana-logo" src="/static/img/logos/made_in_montana.png" />
 					</div>
 
 					<div class="container">
@@ -63,20 +63,7 @@
 					</div>	
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul id="navbar-menu-items" class="nav navbar-nav">
-							{% block menuitems %}{% endblock %}							
-
-							<!-- <li class="dropdown">
-							  <a href="/products" class="dropdown-toggle menuitem" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>						
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>		
-									<li role="separator" class="divider"></li>
-									<li class="dropdown-header">Nav header</li>
-									<li><a href="#">Separated link</a></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul>
-							</li>	 -->					
+							{% block menuitems %}{% endblock %}				
 						</ul>
 					</div>
 				</div>
@@ -93,7 +80,9 @@
 						<h1 class="jumbotron">{{ page.jumbotron }}</h1>
 					</div>
 					<div class="page-content">						
-						{% block content %}{% endblock %}
+						{% block content %}
+							{{page.content | safe}}
+						{% endblock %}
 					</div>
 					<div class="page-content">
 						<footer class="footer">
@@ -115,6 +104,6 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
-	<script src="static/js/fabricon.ui.js"></script>
+	<script src="/static/js/fabricon.ui.js"></script>
 
 </html>

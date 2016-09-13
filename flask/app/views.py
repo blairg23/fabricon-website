@@ -9,18 +9,17 @@ import json
 def index():
 	with open('app/data/pages.json', 'r') as infile:
 		data = json.load(infile)
-	page = data['page']
+	page = data['/index']
 	return render_template(
 							'index.html',
-							page=page							
+							page=page
 						)
 
 @app.route('/about')
 def about():
-	page = {
-			"title": "About Fabricon",
-			"jumbotron": "About Fabricon."
-	}
+	with open('app/data/pages.json', 'r') as infile:
+		data = json.load(infile)
+	page = data['/about']
 	return render_template(
 							'about.html',							
 							page=page

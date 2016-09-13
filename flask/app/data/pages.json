@@ -1,5 +1,5 @@
 {
-	"page":{
+	"/index":{
 			"title": "Home Page",
 			"jumbotron": "Welcome to Fabricon!",
 			"images": [
@@ -10,5 +10,17 @@
 						"/static/img/5.jpg"
 					],
 			"content": "Hi, hello there."
+	},
+	"/about":{
+			"title": "About Fabricon",
+			"jumbotron": "About Fabricon.",
+			"images": [
+						"/static/img/1.jpg",
+						"/static/img/2.jpg",
+						"/static/img/3.jpg",
+						"/static/img/4.jpg",
+						"/static/img/5.jpg"
+					],
+			"content": "About Fabricon stuff."
 	}
 }

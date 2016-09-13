@@ -8,10 +8,21 @@
 {% endblock %}
 
 {% block content %}
-<section>
-	<p>
-		About some Fabricon products.
-	</p>
-</section>
+	<div class="container-fluid">
+		<div class="row">
+			{% for link in page.links %}					
+				<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+					<h4>{{link.display_name}}</h4>
+					<a href="{{link.url}}" class="thumbnail">
+						<img src="http://placehold.it/350x150" class="img-responsive">
+						<div class="caption">
+							lorem gypsum yada yada etc etc
+						</div>
+					</a>
+				</div>
+				<div class="clearfix visible-xs-block"></div>
+			{% endfor %}
+		</div>
+	</div>
 {% endblock %}
 

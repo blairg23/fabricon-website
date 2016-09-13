@@ -1,4 +1,4 @@
-* + Brand and Motto Area */
+/* + Brand and Motto Area */
 .fabricon-brand-motto {
 }
 
@@ -51,6 +51,13 @@ body {
 /** - Bootstrap Overrides */
 
 /** + CONTAINERS */
+
+/*.boxborders{
+    -moz-box-shadow: 0 0 2px black;
+    -webkit-box-shadow: 0 0 2px black;
+    box-shadow: 0 0 2px black;
+}*/
+
 .fabricon-page {
   background-color: white;
   padding-left: 1%;
