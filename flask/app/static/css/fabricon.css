@@ -8,7 +8,6 @@
 }
 
 .fabricon-motto {
-	/*padding-top: 3.5em;*/
 	padding-left: 2em;
 	height: 3em;
 	width: 35em; 
@@ -51,12 +50,6 @@ body {
 /** - Bootstrap Overrides */
 
 /** + CONTAINERS */
-
-/*.boxborders{
-    -moz-box-shadow: 0 0 2px black;
-    -webkit-box-shadow: 0 0 2px black;
-    box-shadow: 0 0 2px black;
-}*/
 
 .fabricon-page {
   background-color: white;
@@ -106,9 +99,7 @@ body {
   display: table;
   width: 90%;
   opacity: 0.9;
-  /*margin-top: 2%;*/ 
-
-  /*margin-top: 2%;*/ }
+}
 
 #navigator-container:hover {
   opacity: 1.0; }
@@ -123,23 +114,7 @@ body {
   color: #000;
 }
 
-/*.footer {
-  position: relative;
-  margin-top: -150px;  negative value of footer height 
-  height: 150px;
-  clear:both;
-  padding-top:20px;
-} */
-/*.footer {
-  position: absolute;
-  text-align: center
-  bottom: 0;
-  width: 100%;
-   Set the fixed height of the footer here 
-  height: 60px;
-  background-color: #f5f5f5;
-}
-*/
+/*address { display: inline; }*/
 
 footer {
     position: relative;    
