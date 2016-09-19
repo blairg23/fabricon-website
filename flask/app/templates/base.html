@@ -1,13 +1,12 @@
 <html>
 	<head>
-
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Website for Fabricon of Missoula, Montana">
 		<meta name="author" content="Blair Gemmer and Evin Özer, Fabricon">
 		<meta name="keywords" content="fabricon, fabric, construction,  consulation, contract,tensile, awnings, canopies, curtains, fabric structures, screens, tents, tipis, missoula, montana, missoula montana, fabricon missoula montana, mark welander, mark, welander, evin ozer, ozer, evin özer, özer, blair gemmer, blair, gemmer" />
-		<meta name="description" content="Missoula's legendary fabric consultants, contractors, and constructionists." />
+		<meta name="description" content="Missoula Fabric Consulting, Contracting, and Construction." />
 		<meta name="resource-type" content="document" />
 		<meta name="robots" content="index, follow" />
 
@@ -73,9 +72,11 @@
 		<div class="master-content" role="main">
 			<div class="content-container">
 				<div id="navigator-container" class="container-fluid fabricon-page">
-					<div class="page-content">
-						{% block carousel %}{% endblock %}			
-					</div>
+					{% if page.images|length  > 0 %}
+						<div class="page-content">
+							{% block carousel %}{% endblock %}			
+						</div>
+					{% endif %}
 					<div id="navigator-header" class="page-header">
 						<h1 class="jumbotron">{{ page.jumbotron }}</h1>
 					</div>
@@ -108,11 +109,11 @@
 	
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript"  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
-	<script src="/static/js/fabricon.ui.js"></script>
+	<script type="text/javascript"  src="/static/js/fabricon.ui.js"></script>
 
 </html>
