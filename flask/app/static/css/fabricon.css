@@ -141,8 +141,13 @@ footer a:hover {
 }
 
 li.menuitem{
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+li.social-icon{
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /** - Custom Stuff */
