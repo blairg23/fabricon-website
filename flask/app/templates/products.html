@@ -2,10 +2,11 @@
 {% set active_page = "products" %}
 
 {% block content %}
+	{{page.content | safe}}
 	<div class="container-fluid">
 		<div class="row">
 			{% for link in page.links %}
-				<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 					<h4>{{link.display_name}}</h4>
 					<a href="{{link.url}}" class="thumbnail">
 						{% if link.images|length > 0 %}
@@ -41,7 +42,7 @@
 						{% endif %}
 						
 						<div class="caption">
-							lorem gypsum yada yada etc etc
+							
 						</div>
 					</a>
 				</div>
