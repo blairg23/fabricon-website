@@ -1,1 +1,1 @@
-web: gunicorn fabricon:app
+web: gunicorn app:app
