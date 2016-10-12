@@ -2,7 +2,6 @@
 {% set active_page = "products" %}
 
 {% block content %}
-	{{page.content | safe}}
 	<div class="container-fluid">
 		<div class="row">
 			{% for link in page.links %}
@@ -50,5 +49,6 @@
 			{% endfor %}
 		</div>
 	</div>
+	{{page.content | safe}}
 {% endblock %}
 
