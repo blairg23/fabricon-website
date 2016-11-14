@@ -24,6 +24,13 @@ def fabric_structures_tensile():
 	page = data['/products/fabric_structures/tensile']
 	return render_template('fabric_structures_tensile.html', page=page)
 
+@app.route('/products/curtains_screens_and_facades/facades')
+def curtains_screens_and_facades_facades():
+	with open('app/data/pages.json', 'r') as infile:
+		data = json.load(infile)
+	page = data['/products/curtains_screens_and_facades/facades']
+	return render_template('curtains_screens_and_facades_facades.html', page=page)
+
 @app.route('/products/services')
 def products_services():
 	with open('app/data/pages.json', 'r') as infile:
@@ -44,13 +51,6 @@ def commercial_and_residential_awnings_awning_styles():
 		data = json.load(infile)
 	page = data['/products/awnings_and_canopies/commercial_and_residential_awnings/awning_styles']
 	return render_template('commercial_and_residential_awnings_awning_styles.html', page=page)
-
-@app.route('/products/awnings_and_canopies/retractable/nuimage')
-def retractable_nuimage():
-	with open('app/data/pages.json', 'r') as infile:
-		data = json.load(infile)
-	page = data['/products/awnings_and_canopies/retractable/nuimage']
-	return render_template('retractable_nuimage.html', page=page)
 
 @app.route('/')
 @app.route('/index')
@@ -74,13 +74,6 @@ def custom_marine():
 		data = json.load(infile)
 	page = data['/products/custom/marine']
 	return render_template('custom_marine.html', page=page)
-
-@app.route('/products/awnings_and_canopies/retractable/retractable_awnings')
-def retractable_retractable_awnings():
-	with open('app/data/pages.json', 'r') as infile:
-		data = json.load(infile)
-	page = data['/products/awnings_and_canopies/retractable/retractable_awnings']
-	return render_template('retractable_retractable_awnings.html', page=page)
 
 @app.route('/products/fabric_structures/frame_supported')
 def fabric_structures_frame_supported():
