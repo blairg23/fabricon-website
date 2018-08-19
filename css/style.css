@@ -569,11 +569,13 @@ label.error{
   font-weight: 700;
   font-size: 10.8em;
   line-height: 1;
-  color: #000;
+  /*color: #000;*/
+  color: #feb113;
   position: absolute;
   left: 0;
   top:0.03em;
-  opacity: 0.035;
+  /*opacity: 0.035;*/
+  opacity: 0.15;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -642,7 +644,7 @@ label.error{
   position: absolute;
   z-index: -1;
   bottom: -0.4em;
-  right:-0.37em;
+  /*right:-0.37em;*/
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 8.75em;
