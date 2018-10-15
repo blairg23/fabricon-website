@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django.urls import include, path
 
+from django.contrib import admin
+
 urlpatterns = [
-    path(r'', include('django.contrib.auth.urls')),
+    path('', include('django.contrib.auth.urls')),
     #
     # Administration
     #
-    path('admin/', include('admin.site.urls')),
+    path('admin/', admin.site.urls),
     #
     # Fabricon
     #
-    path(r'^/', include('fabricon.urls'))
+    path('index/', include('fabricon.urls'))
 ]

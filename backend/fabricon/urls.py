@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.urls import path
 
-from django.fabricon import views
+from fabricon import views
 
 urlpatterns = [
-        path(r'', view=views.index, name='fabricon-index'),
+        path('', view=views.index, name='fabricon-index'),
 ]
