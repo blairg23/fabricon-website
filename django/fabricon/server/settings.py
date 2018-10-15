@@ -32,6 +32,7 @@ ADMIN = [
 ]
 ADMINS = ADMIN
 
+
 ALLOWED_HOSTS = [
     'localhost',
     'dev.fabricon.com',
