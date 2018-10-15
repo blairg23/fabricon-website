@@ -624,7 +624,8 @@ label.error{
 }
 
 .brand{
-  display: inline-block;
+  display: block;
+  /*display: inline-block;*/
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size:4vmin;
@@ -807,11 +808,22 @@ label.error{
 }
 
 .navbar-desctop .brand{
+  /*display: block;*/
   display: none;
+  /*position: absolute;*/
   position: relative;
   top:-0.22em;
+  bottom:-0.22em;
   font-size: 1.6em;
 }
+
+/*.navbar-desctop img{
+  display: block;
+  position: absolute;
+  top:-0.22em;
+  bottom:-0.22em;
+  font-size: 1.6em;
+}*/
 
 .navbar-desctop-menu{
   float: right;
@@ -914,6 +926,7 @@ label.error{
 }
 
 .navbar-desctop.affix .brand{
+  /*display: block;*/
   display: inline-block;
 }
 
