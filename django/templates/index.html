@@ -1,208 +1,11 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Website for Fabricon of Missoula, Montana">
-      <meta name="author" content="Blair Gemmer, Fabricon">
-      <meta name="keywords" content="fabricon, fabric, construction,  consulation, contract,tensile, awnings, canopies, curtains, fabric structures, screens, tents, tipis, missoula, montana, missoula montana, fabricon missoula montana, mark welander, mark, welander, blair gemmer, blair, gemmer" />
-      <meta name="description" content="Missoula Fabric Consulting, Contracting, and Construction." />
-      <meta name="resource-type" content="document" />
-      <meta name="robots" content="index, follow" />
-      <meta  charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Fabricon of Missoula, Montana.</title> 
+{% extends "base.html" %}
+{% block content %}
+<!-- Layout -->
 
-      <!-- Favicons -->
-      <link rel="shortcut icon" href="favicon.ico">
-      <link rel="apple-touch-icon" href="apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<div class="layout">
 
-      <!-- Styles -->
-      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    
-      <!-- Loader -->
-
-      <div class="loader">
-        <div class="page-lines">
-          <div class="container">
-            <div class="col-line col-xs-4">
-              <div class="line"></div>
-            </div>
-            <div class="col-line col-xs-4">
-              <div class="line"></div>
-            </div>
-            <div class="col-line col-xs-4">
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-          </div>
-        </div>
-        <div class="loader-brand"> 
-          <div class="sk-folding-cube">
-            <div class="sk-cube1 sk-cube"></div>
-            <div class="sk-cube2 sk-cube"></div>
-            <div class="sk-cube4 sk-cube"></div>
-            <div class="sk-cube3 sk-cube"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Header -->
-
-      <header id="top" class="header-home">
-        <div class="brand-panel">
-          <a href="#top" class="brand js-target-scroll">
-            <a href="index.html"><img src="img/fabricon_logo_lg.svg" height=100% width=100% /></a>
-            <!-- go<span class="text-primary">.</span>arch -->
-          </a>
-          <div class="brand-name">fabricon</div>
-          <div class="slide-number">
-            <span class="current-number text-primary">0<span class="count">1</span></span>
-            <sup><span class="delimiter">/</span> 0<span class="total-count"></span></sup>
-          </div>
-        </div>
-        <div class="header-phone"><a class="telephone" href="tel:+14067288300">+1 (406) 728-8300</a></div>
-        <div class="vertical-panel"></div>
-        <div class="vertical-panel-content">
-          <div class="vertical-panel-info">
-              <div class="vertical-panel-title">MISSOULA - MONTANA</div>
-              <div class="line"></div>
-           </div>
-          <ul class="social-list">
-            <li><a href="https://www.linkedin.com/company/fabricon-llc" class="fa fa-linkedin" target=_blank></a></li>
-            <li><a href="https://www.facebook.com/Fabricon-LLC-110448395686050/" class="fa fa-facebook" target=_blank></a></li>
-            <li><a href="https://plus.google.com/105033875772747195888" class="fa fa-google-plus" target=_blank></a></li>
-           </ul>  
-        </div> 
-
-        <!-- Navigation Desctop -->
-
-        <nav class="navbar-desctop visible-md visible-lg">
-          <div class="container">
-            <a href="#top" class="brand js-target-scroll">
-              <!-- <span class="text-primary">fabric</span>on -->
-              <img src="img/fabricon_logo_lg.svg" height="100%" width="10%" />
-              <!-- go<span class="text-primary">.</span>arch -->
-            </a>
-            <ul class="navbar-desctop-menu">
-              <!-- <li class="active">
-                <a href="index.html">Home</a>
-              </li> -->
-              <li>
-                <a href="products.html">Products</a>
-                <ul>
-                  <li><a href="fabric_structures.html">Fabric Structures</a></li>
-                  <li>
-                    <a href="curtains_screens_facades.html">Curtains, Screens, and Facades</a>
-                  </li>
-                  <li>
-                    <a href="awnings_canopies.html">Awnings and Canopies</a>
-                  </li>
-                  <li>
-                    <a href="custom_lines.html">Custom Lines</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>  
-              <li>
-                <a href="portfolio.html">Portfolio</a>
-                <ul>
-                  <li><a href="case_studies.html">Case Studies</a></li>
-                  <li>
-                    <a href="client_list.html">Client List</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="knowledge.html">Knowledge</a>
-              </li>
-              <li>
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!-- Navigation Mobile -->
-
-        <nav class="navbar-mobile">
-          <a href="#top" class="brand js-target-scroll">
-            <!-- go<span class="text-primary">.</span>arch -->
-            <!-- <a href="#top" class="brand js-target-scroll"><span class="text-primary">fabric</span>on -->
-            <a href="index.html"><img src="img/fabricon_logo_lg.svg" height="100%" width="10%" /></a>
-          </a>
-
-          <!-- Navbar Collapse -->
-
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbar-mobile"> 
-            <ul class="navbar-nav-mobile">
-              <li>
-                <a href="products.html">Products</a>
-                <ul>
-                  <li><a href="fabric_structures.html">Fabric Structures</a></li>
-                  <li>
-                    <a href="curtains_screens_facades.html">Curtains, Screens, and Facades</a>
-                  </li>
-                  <li>
-                    <a href="awnings_canopies.html">Awnings and Canopies</a>
-                  </li>
-                  <li>
-                    <a href="custom_lines.html">Custom Lines</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="services.html">Services</a>
-              </li>  
-              <li>
-                <a href="portfolio.html">Portfolio</a>
-                <ul>
-                  <li><a href="case_studies.html">Case Studies</a></li>
-                  <li>
-                    <a href="client_list.html">Client List</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="knowledge.html">Knowledge</a>
-              </li>
-              <li>
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </nav> 
-      </header>
-
-    <!-- Layout -->
-
-    <div class="layout">
-      
       <!-- Home -->
-      
+
       <main class="main">
 
         <div class="arrow-left"></div>
@@ -224,8 +27,8 @@
 
                 <!-- Layer 1 -->
 
-                <div class="slide-title tp-caption tp-resizeme" 
-                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']" 
+                <div class="slide-title tp-caption tp-resizeme"
+                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['-35','-35', '-25']"
                   data-fontsize="['50','45', '35']"
                   data-lineheight="['80','75', '65']"
@@ -233,37 +36,37 @@
                   data-height="none"
                   data-whitespace="normal"
                   data-transform_idle="o:1;"
-                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                  data-start="500" 
-                  data-splitin="chars" 
-                  data-splitout="none" 
-                  data-responsive_offset="on" 
+                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
+                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                  data-start="500"
+                  data-splitin="chars"
+                  data-splitout="none"
+                  data-responsive_offset="on"
                   data-elementdelay="0.05">STRETCH THE FABRIC<br /> OF YOUR IMAGINATION.
                 </div>
 
                 <!-- Layer 2 -->
 
                 <div class="slide-subtitle tp-caption tp-resizeme"
-                  data-x="['right','right','right','right']" data-hoffset="['0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['75','105']"
-                  data-fontsize="['18']" 
+                  data-fontsize="['18']"
                   data-whitespace="nowrap"
                   data-transform_idle="o:1;"
-                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" 
-                  data-transform_out="opacity:0;s:1000;s:1000;" 
-                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
+                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
+                  data-transform_out="opacity:0;s:1000;s:1000;"
+                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
                   data-splitout="none">Today, your ability to solve old problems in new ways and break from the<br /> limitations of traditional building materials has never been greater. Fabric with a<br /> stunning range of capabilities, is opening new vistas to explore. From backyards<br /> to city skylines, the only limit is your imagination. Let us help you stretch it.
                 </div>
 
                 <!-- Layer 3 -->
 
                 <div class="tp-caption"
-                  data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['195','215']"
                   data-width="none"
                   data-height="none"
@@ -271,12 +74,12 @@
                   data-transform_idle="o:1;"
                   data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
                   data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
-                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                  data-mask_out="x:inherit;y:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
-                  data-splitout="none" 
+                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
+                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                  data-mask_out="x:inherit;y:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
+                  data-splitout="none"
                   data-responsive_offset="on"><a href="#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
                 </div>
               </li>
@@ -291,8 +94,8 @@
 
                 <!-- Layer 1 -->
 
-                <div class="slide-title tp-caption tp-resizeme" 
-                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']" 
+                <div class="slide-title tp-caption tp-resizeme"
+                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['-35','-35', '-55']"
                   data-fontsize="['50','45', '35']"
                   data-lineheight="['80','75','65']"
@@ -300,13 +103,13 @@
                   data-height="none"
                   data-whitespace="normal"
                   data-transform_idle="o:1;"
-                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                  data-start="500" 
-                  data-splitin="chars" 
-                  data-splitout="none" 
+                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
+                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                  data-start="500"
+                  data-splitin="chars"
+                  data-splitout="none"
                   data-responsive_offset="on"
                   data-elementdelay="0.05">Exhibition center in boston
                 </div>
@@ -315,25 +118,25 @@
                 <!-- Layer 2 -->
 
                 <div class="slide-subtitle tp-caption tp-resizeme"
-                  data-x="['right','right','right','right']" data-hoffset="['0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['75','105']"
-                  data-fontsize="['18']" 
+                  data-fontsize="['18']"
                   data-whitespace="nowrap"
                   data-transform_idle="o:1;"
-                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" 
-                  data-transform_out="opacity:0;s:1000;s:1000;" 
-                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
+                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
+                  data-transform_out="opacity:0;s:1000;s:1000;"
+                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
                   data-splitout="none">
-                  Modern Hotel is the architecture of a new generation, a building<br> that exists not only in the dimension of space,<br> 
-                  but also in the dimension of time and communication. 
+                  Modern Hotel is the architecture of a new generation, a building<br> that exists not only in the dimension of space,<br>
+                  but also in the dimension of time and communication.
                 </div>
 
                 <!-- Layer 3 -->
 
                 <div class="tp-caption tp-resizeme"
-                  data-x="['right','right','right','right']" data-hoffset="['0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['195','210']"
                   data-width="none"
                   data-height="none"
@@ -341,12 +144,12 @@
                   data-transform_idle="o:1;"
                   data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
                   data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
-                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                   data-mask_out="x:inherit;y:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
-                  data-splitout="none" 
+                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
+                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                   data-mask_out="x:inherit;y:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
+                  data-splitout="none"
                   data-responsive_offset="on"
                   style="z-index: 8;"><a href="#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
                 </div>
@@ -362,8 +165,8 @@
 
                 <!-- Layer 1 -->
 
-                <div class="slide-title tp-caption tp-resizeme" 
-                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']" 
+                <div class="slide-title tp-caption tp-resizeme"
+                  data-x="['right','right','right','right']" data-hoffset="['-18','-18','-18','-18']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['-35','-35', '-25']"
                   data-fontsize="['50','45', '35']"
                   data-lineheight="['80','75', '65']"
@@ -371,13 +174,13 @@
                   data-height="none"
                   data-whitespace="normal"
                   data-transform_idle="o:1;"
-                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                  data-start="500" 
-                  data-splitin="chars" 
-                  data-splitout="none" 
+                  data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
+                  data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                  data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
+                  data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                  data-start="500"
+                  data-splitin="chars"
+                  data-splitout="none"
                   data-responsive_offset="on"
                   data-elementdelay="0.05">Modern hotel in london
                 </div>
@@ -386,25 +189,25 @@
                 <!-- Layer 2 -->
 
                 <div class="slide-subtitle tp-caption tp-resizeme"
-                  data-x="['right','right','right','right']" data-hoffset="['0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['75','105']"
-                  data-fontsize="['18']" 
+                  data-fontsize="['18']"
                   data-whitespace="nowrap"
                   data-transform_idle="o:1;"
-                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;" 
-                  data-transform_out="opacity:0;s:1000;s:1000;" 
-                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
+                  data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1200;e:Power1.easeInOut;"
+                  data-transform_out="opacity:0;s:1000;s:1000;"
+                  data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
                   data-splitout="none">Exhibition Center is the architecture of a new generation,<br>
-                  a building that exists not only in the dimension of space,<br> 
-                  but also in the dimension of time and communication.  
+                  a building that exists not only in the dimension of space,<br>
+                  but also in the dimension of time and communication.
                 </div>
 
                 <!-- Layer 3 -->
 
                 <div class="tp-caption tp-resizeme"
-                  data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
+                  data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']"
                   data-y="['middle','middle','middle','middle']" data-voffset="['195','215']"
                   data-width="none"
                   data-height="none"
@@ -412,13 +215,13 @@
                   data-transform_idle="o:1;"
                   data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
                   data-style_hover="c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
-                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;" 
-                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                  data-mask_out="x:inherit;y:inherit;" 
-                  data-start="1500" 
-                  data-splitin="none" 
-                  data-splitout="none" 
-                  data-responsive_offset="on" 
+                  data-transform_in="y:50px;opacity:0;s:1500;e:Power4.easeInOut;"
+                  data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                  data-mask_out="x:inherit;y:inherit;"
+                  data-start="1500"
+                  data-splitin="none"
+                  data-splitout="none"
+                  data-responsive_offset="on"
                   style="z-index: 8;"><a href="#about" class="btn js-target-scroll">Look more <i class="icon-next"></i></a>
                 </div>
               </li>
@@ -427,8 +230,8 @@
         </div>
       </main>
 
-      <div class="content">   
-      
+      <div class="content">
+
         <!-- About  -->
 
         <section id="about" class="about section">
@@ -747,7 +550,7 @@
 
         <!-- Footer -->
 
-        <footer id="footer" class="footer">     
+        <footer id="footer" class="footer">
           <div class="container">
             <div class="row-base row">
               <div class="col-base text-left-md col-md-4">
@@ -786,32 +589,4 @@
         </div>
       </div>
     </div>
-
-  <!-- SCRIPTS -->
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.magnific-popup.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-
-  <!-- SLIDER REVOLUTION -->
-  <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
-  <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
-
-  <!-- SLIDER REVOLUTION 5.0 EXTENSIONS   -->
-  <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
-  <script src="js/rev-slider/revolution.extension.video.min.js"></script>
-  <script src="js/interface.js"></script> 
-  </body>
-</html>
+{% endblock content %}
