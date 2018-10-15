@@ -27,6 +27,7 @@ SECRET_KEY = 'j$+f^7dk%c#_3&pn-d9o&7ih&y443_s__)z%$!hfr5ytbdpod9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ADMIN = [
     ('Administrator Group', 'admin@intelligen.technology')
 ]

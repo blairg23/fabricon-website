@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9f2fbd0-a61b-4627-8384-477b46f51659" name="Default Changelist" comment="Set up settings, environments, and base fixtures for fabricon app.">
+    <list default="true" id="b9f2fbd0-a61b-4627-8384-477b46f51659" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django/fabricon/server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/fabricon/server/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +31,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1031" />
-          <entry key="txt" value="69" />
+          <entry key="py" value="1033" />
+          <entry key="txt" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="69" />
-          <entry key="Python" value="1031" />
+          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="Python" value="1033" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -49,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django/fabricon/server/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="391">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -160,6 +161,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tomis-backend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,10 +186,25 @@
       <option name="presentableId" value="Default" />
       <updated>1539567634188</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test mirror.">
+      <created>1539570279764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539570279764</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test mirror 3.">
+      <created>1539570607199</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539570607199</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-4" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -219,6 +236,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test mirror." />
+    <MESSAGE value="Test mirror 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test mirror 3." />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/django/fabricon/server/config/development.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -236,8 +258,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django/fabricon/server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="391">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
