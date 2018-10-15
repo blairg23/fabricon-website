@@ -1,0 +1,34 @@
+[
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "localhost",
+      "name": "localhost"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+      "domain": "dev.fabricon.com",
+      "name": "dev.fabricon.com"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 3,
+    "fields": {
+      "domain": "staging.fabricon.com",
+      "name": "staging.fabricon.com"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 4,
+    "fields": {
+      "domain": "fabricon.com",
+      "name": "fabricon.com"
+    }
+  }
+]

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
+ENVIRONMENT = os.environ.get('FABRICON_ENV')
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,25 +27,56 @@ SECRET_KEY = 'j$+f^7dk%c#_3&pn-d9o&7ih&y443_s__)z%$!hfr5ytbdpod9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ADMIN = [
+    ('Administrator Group', 'admin@intelligen.technology')
+]
+ADMINS = ADMIN
 
+ALLOWED_HOSTS = [
+    'localhost',
+    'dev.fabricon.com',
+    'staging.fabricon.com',
+    'fabricon.com'
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = ALLOWED_HOSTS
+CORS_REPLACE_HTTPS_REFERER = True
 
 # Application definition
 
 INSTALLED_APPS = [
+    # Django Builtins
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Django Extras
+    'django.contrib.sites',
+    # CORS
+    'corsheaders',
+    # All Auth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # Fabricon
+    'fabricon'
 ]
 
 MIDDLEWARE = [
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
+    # Django Builtins
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    # CORS
+    'corsheaders.middleware.CorsPostCsrfMiddleware',
+    # Django Builtin
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -67,7 +100,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'fabricon.wsgi.application'
+WSGI_APPLICATION = 'server.wsgi.application'
 
 
 # Database
@@ -81,9 +114,15 @@ DATABASES = {
 }
 
 
+# All AUth settings
+# http://django-allauth.readthedocs.io/en/latest/configuration.html
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'required'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -99,6 +138,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -118,3 +161,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+config_module = __import__('server.config.%s' % ENVIRONMENT, globals(), locals(), ['server'])
+# Load the config settings properties into the local scope.
+for setting in dir(config_module):
+    if setting == setting.upper():
+        locals()[setting] = getattr(config_module, setting)
