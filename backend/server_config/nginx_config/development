@@ -1,0 +1,46 @@
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# http://wiki.nginx.org/Pitfalls
+# http://wiki.nginx.org/QuickStart
+# http://wiki.nginx.org/Configuration
+#
+# Generally, you will want to move this file somewhere, and start with a clean
+# file but keep this around for reference. Or just disable in sites-enabled.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+upstream dev.fabricon.com {
+	server 127.0.0.1:8000;
+}
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+        server_name dev.fabricon.com;
+
+	root /var/www/html;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+    location /admin/ {
+            include /etc/nginx/uwsgi_params;
+            uwsgi_pass unix:/var/run/django.socket;
+            uwsgi_request_buffering on;
+            uwsgi_send_timeout 600s;
+            uwsgi_read_timeout 600s;
+            uwsgi_pass_request_headers on;
+    }
+
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ /index.html =404;
+	}
+}
+
+
