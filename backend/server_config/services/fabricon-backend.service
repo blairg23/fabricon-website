@@ -1,0 +1,29 @@
+# Gunicorn Site systemd service file
+
+[Unit]
+Description=Backend server for Fabricon
+After=network.target
+After=syslog.target
+
+[Service]
+EnvironmentFile=-/etc/environment
+WorkingDirectory=/root/fabricon-website/backend/
+ExecStart=/usr/local/bin/uwsgi --socket /tmp/django.socket --buffer-size=65535 --workers=25 --master --module server.wsgi_django --chmod-socket=666 --socket-timeout=1200 --enable-threads --harakiri=600 --reload-on-rss=200 --reload-on-as=200
+# Requires systemd version 211 or newer
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+#PIDFile=/var/run/healthware-server.pid
+#User=root
+#Group=root
+#ExecStart=/usr/local/bin/gunicorn --workers 5 server.wsgi_django:application -t 300
+#ExecReload=/bin/kill -s HUP $MAINPID
+#ExecStop=/bin/kill -s TERM $MAINPID
+#PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
