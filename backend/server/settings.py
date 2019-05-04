@@ -27,7 +27,6 @@ SECRET_KEY = 'j$+f^7dk%c#_3&pn-d9o&7ih&y443_s__)z%$!hfr5ytbdpod9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ADMIN = [
     ('Administrator Group', 'admin@intelligen.technology')
 ]
@@ -36,7 +35,6 @@ ADMINS = ADMIN
 ALLOWED_HOSTS = [
     'localhost',
     'dev.fabricon.com',
-    'staging.fabricon.com',
     'fabricon.com'
 ]
 
@@ -165,6 +163,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/var/www/html/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
 ]
 
 config_module = __import__('server.config.%s' % ENVIRONMENT, globals(), locals(), ['server'])
