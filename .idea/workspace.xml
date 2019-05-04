@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9f2fbd0-a61b-4627-8384-477b46f51659" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/server_config/nginx_config/development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="170">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -70,11 +69,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            <state relative-caret-position="357">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="81" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -125,6 +133,7 @@
       <find>python</find>
       <find>pycach</find>
       <find>.idea</find>
+      <find>montana</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,8 +159,8 @@
         <option value="$PROJECT_DIR$/backend/server/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/backend/manage.py" />
-        <option value="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" />
         <option value="$PROJECT_DIR$/backend/server_config/nginx_config/development" />
+        <option value="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" />
       </list>
     </option>
   </component>
@@ -259,7 +268,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539567634188</updated>
-      <workItem from="1556950663184" duration="4717000" />
+      <workItem from="1556950663184" duration="5171000" />
     </task>
     <task id="LOCAL-00001" summary="Test mirror.">
       <created>1539570279764</created>
@@ -331,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556955860731</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added nginx config file.">
+      <created>1556959392296</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556959392296</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4717000" />
+    <option name="totallyTimeSpent" value="5171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -378,7 +394,8 @@
     <MESSAGE value="Updated requirements.txt" />
     <MESSAGE value="Testing." />
     <MESSAGE value="Fixed minor bug in service file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed minor bug in service file." />
+    <MESSAGE value="Added nginx config file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added nginx config file." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/django/fabricon/server/config/development.py" />
@@ -500,13 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -516,8 +526,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        <state relative-caret-position="357">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="81" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>

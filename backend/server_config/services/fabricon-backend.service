@@ -8,7 +8,7 @@ After=syslog.target
 [Service]
 EnvironmentFile=-/etc/environment
 WorkingDirectory=/root/fabricon-website/backend/
-ExecStart=/usr/local/bin/uwsgi --socket /tmp/django.socket --buffer-size=65535 --workers=25 --master --module server.wsgi --chmod-socket=666 --socket-timeout=1200 --enable-threads --harakiri=600 --reload-on-rss=200 --reload-on-as=200
+ExecStart=/usr/local/bin/uwsgi --buffer-size=65535 --workers=25 --master --module server.wsgi --chmod-socket=666 --socket-timeout=1200 --enable-threads --harakiri=600 --reload-on-rss=200 --reload-on-as=200
 # Requires systemd version 211 or newer
 RuntimeDirectory=uwsgi
 Restart=always
