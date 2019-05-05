@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b9f2fbd0-a61b-4627-8384-477b46f51659" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="90" column="58" lean-forward="true" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
+            <state relative-caret-position="340">
+              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -43,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="289">
+              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -82,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+            <state relative-caret-position="230">
+              <caret line="436" column="18" lean-forward="true" selection-start-line="436" selection-start-column="18" selection-end-line="436" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -110,7 +111,6 @@
       <find>ad</find>
       <find>base_dir</find>
       <find>temple</find>
-      <find>img/</find>
       <find>svg</find>
       <find>380x370</find>
       <find>static</find>
@@ -119,14 +119,18 @@
       <find>python</find>
       <find>pycach</find>
       <find>.idea</find>
-      <find>montana</find>
       <find>portfolio.html</find>
       <find>==</find>
       <find>=&gt;</find>
+      <find>montana</find>
+      <find>fonts/</find>
+      <find>img/</find>
     </findStrings>
     <replaceStrings>
       <replace>=&gt;</replace>
       <replace>&gt;=</replace>
+      <replace>static/fonts/</replace>
+      <replace>static/img/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\Dropbox\Projects\sandboxes\python\fabricon-website</dir>
@@ -150,14 +154,14 @@
         <option value="$PROJECT_DIR$/backend/fabricon/apps.py" />
         <option value="$PROJECT_DIR$/backend/fabricon/urls.py" />
         <option value="$PROJECT_DIR$/backend/server/urls.py" />
-        <option value="$PROJECT_DIR$/backend/templates/index.html" />
-        <option value="$PROJECT_DIR$/backend/templates/base.html" />
         <option value="$PROJECT_DIR$/backend/server/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/backend/server_config/nginx_config/development" />
         <option value="$PROJECT_DIR$/backend/manage.py" />
         <option value="$PROJECT_DIR$/backend/requirements.txt" />
         <option value="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" />
+        <option value="$PROJECT_DIR$/backend/server_config/nginx_config/development" />
+        <option value="$PROJECT_DIR$/backend/templates/base.html" />
+        <option value="$PROJECT_DIR$/backend/templates/index.html" />
       </list>
     </option>
   </component>
@@ -378,11 +382,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557020547088</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Service was missing socket.">
+      <created>1557020983270</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1557020983270</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated Nginx root directory">
+      <created>1557022674209</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1557022674209</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9216000" />
+    <option name="totallyTimeSpent" value="10567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -429,7 +447,9 @@
     <MESSAGE value="Trying something." />
     <MESSAGE value="Updated requirements.txt" />
     <MESSAGE value="Simplified requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simplified requirements.txt" />
+    <MESSAGE value="Service was missing socket." />
+    <MESSAGE value="Updated Nginx root directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Nginx root directory" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/django/fabricon/server/config/development.py" />
@@ -508,18 +528,6 @@
     <entry file="file://$PROJECT_DIR$/backend/server/config/development.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -527,22 +535,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/fabricon/models.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="90" column="58" lean-forward="true" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -587,8 +581,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="289">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="436" column="18" lean-forward="true" selection-start-line="436" selection-start-column="18" selection-end-line="436" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#li#2;n#ul#0;n#div#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
