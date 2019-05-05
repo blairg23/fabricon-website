@@ -21,7 +21,7 @@ server {
 	listen [::]:80 default_server;
         server_name dev.fabricon.com;
 
-	root /var/www/html;
+	root /var/www/html/backend/templates;
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
