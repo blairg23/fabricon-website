@@ -14,6 +14,7 @@ echo "Starting $NAME as `whoami`"
 # Activate the virtual environment
 cd $DJANGODIR
 source ~/.virtualenvs/fabricon/bin/activate
+pip3 install -r requirements.txt --upgrade
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
