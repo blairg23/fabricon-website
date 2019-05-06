@@ -15,8 +15,9 @@
 #
 upstream dev.fabricon.com {
 	# server 127.0.0.1:8000;
-	server unix:/var/www/html/fabricon-website/backend/run/gunicorn.sock
+	server unix:/var/www/html/fabricon-website/backend/run/gunicorn.sock fail_timeout=10s;
 }
+
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
