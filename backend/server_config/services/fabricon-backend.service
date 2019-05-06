@@ -4,7 +4,7 @@ Description=Fabricon gunicorn daemon
 [Service]
 Type=simple
 User=nginx
-ExecStart=/var/www/html/fabricon/server_config/gunicorn/gunicorn_start.sh
+ExecStart=/var/www/html/fabricon-website/backend/server_config/gunicorn/gunicorn_start.sh
 
 [Install]
 WantedBy=multi-user.target
