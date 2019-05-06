@@ -11,9 +11,6 @@
 # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
 ##
 
-
-worker_processes 1;
-
 user nobody nogroup;
 # 'user nobody nobody;' for systems with 'nobody' as a group instead
 error_log  /var/log/nginx/error.log warn;
