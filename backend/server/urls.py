@@ -26,5 +26,5 @@ urlpatterns = [
     #
     # Fabricon
     #
-    path('index/', include('fabricon.urls'))
+    path('', include('fabricon.urls')),
 ]

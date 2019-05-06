@@ -13,24 +13,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# from django.urls import path
-#
-# from fabricon import views
-#
-# urlpatterns = [
-#         path('', view=views.index, name='fabricon-index'),
-# ]
+from django.urls import path
 
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
-from django.conf.urls import url
-from django.views.generic.base import TemplateView
+from fabricon import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name='index.html'), name='home'),
+        path('index.html', view=views.index, name='fabricon-index'),
 ]
+
+# from django.contrib import admin
+# from django.urls import path, include
+# from django.conf import settings
+# from django.conf.urls.static import static
+# from django.conf.urls import url
+# from django.views.generic.base import TemplateView
+#
+# urlpatterns = [
+#     url(r'^$', TemplateView.as_view(template_name='index.html'), name='home'),
+# ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
