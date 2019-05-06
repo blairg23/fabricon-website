@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9f2fbd0-a61b-4627-8384-477b46f51659" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server_config/nginx_config/development" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server_config/nginx_config/development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +24,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1445">
-                  <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+                <state relative-caret-position="204">
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
                 </state>
               </provider>
             </entry>
@@ -44,11 +42,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -164,8 +162,8 @@
         <option value="$PROJECT_DIR$/backend/fabricon/__init__.py" />
         <option value="$PROJECT_DIR$/backend/server/settings.py" />
         <option value="$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh" />
-        <option value="$PROJECT_DIR$/backend/server_config/nginx_config/development" />
         <option value="$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service" />
+        <option value="$PROJECT_DIR$/backend/server_config/nginx_config/development" />
       </list>
     </option>
   </component>
@@ -535,11 +533,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557110659523</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Permissions issue with fabricon-backend service.">
+      <created>1557112213054</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1557112213054</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Permissions issue with fabricon-backend service.">
+      <created>1557112268943</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1557112268943</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24541000" />
+    <option name="totallyTimeSpent" value="24839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,10 +777,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
+    <entry file="file://$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="47" lean-forward="true" selection-start-line="85" selection-start-column="47" selection-end-line="85" selection-end-column="47" />
+        <state relative-caret-position="510">
+          <caret line="30" column="23" lean-forward="true" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -779,10 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh">
+    <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
