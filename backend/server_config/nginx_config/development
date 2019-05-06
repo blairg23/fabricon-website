@@ -14,14 +14,43 @@
 # Default server configuration
 #
 upstream dev.fabricon.com {
-	server 127.0.0.1:8000;
+	# server 127.0.0.1:8000;
+	server unix:/var/www/html/fabricon-website/backend/run/gunicorn.sock
 }
 server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
-        server_name dev.fabricon.com;
+    server_name dev.fabricon.com;
 
-	root /var/www/html/fabricon-website/backend;
+    access_log /var/www/html/logs/nginx-access.log;
+    error_log /var/www/html/logs/nginx-error.log warn;
+
+    location /static/ {
+        autoindex on;
+        alias /var/www/html/fabricon-website/backend/static/;
+    }
+
+    location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ /index.html =404;
+
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+
+        if (!-f $request_filename) {
+            proxy_pass http://dev.fabricon.com;
+            break;
+        }
+	}
+
+	# root /var/www/html/fabricon-website/backend;
+
+	# For favicon
+	location /favicon.ico {
+	    alias /var/www/html/fabricon-website/static/img/favicon.ico;
+	}
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
@@ -35,12 +64,15 @@ server {
             uwsgi_pass_request_headers on;
     }
 
-
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ /index.html =404;
-	}
+    # For robots.txt
+    # location  /robots.txt {
+    #     alias /var/www/test/test/static/robots.txt ;
+    # }
+    # Error pages
+    # error_page 500 502 503 504 /500.html;
+    # location = /500.html {
+    #     root /var/www/html/fabricon-website/backend/static/;
+    # }
 }
 
 

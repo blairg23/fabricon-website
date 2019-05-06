@@ -40,8 +40,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="23" lean-forward="true" selection-end-line="29" selection-end-column="23" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
                 </state>
               </provider>
             </entry>
@@ -100,8 +100,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+                <state relative-caret-position="677">
+                  <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -136,8 +136,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/backend/server/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="153" column="15" selection-start-line="153" selection-start-column="15" selection-end-line="153" selection-end-column="15" />
+                <state relative-caret-position="490">
+                  <caret line="155" column="13" lean-forward="true" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -221,9 +221,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="775" />
-    <option name="y" value="-13" />
-    <option name="width" value="968" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -482,11 +481,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557104595676</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated gunicorn and nginx config files.">
+      <created>1557106465184</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1557106465184</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Updated gunicorn bash script.">
+      <created>1557106657669</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1557106657669</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18854000" />
+    <option name="totallyTimeSpent" value="19685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -538,7 +551,9 @@
     <MESSAGE value="* Fixed the static file references to point at staticfiles.&#10;* Fixed settings to point at correct static directory." />
     <MESSAGE value="Updated to use Gunicorn instead of uWSGI." />
     <MESSAGE value="Updated requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated requirements.txt" />
+    <MESSAGE value="Updated gunicorn and nginx config files." />
+    <MESSAGE value="Updated gunicorn bash script." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated gunicorn bash script." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/django/fabricon/server/config/development.py" />
@@ -670,20 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="153" column="15" selection-start-line="153" selection-start-column="15" selection-end-line="153" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -708,17 +709,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="155" column="13" lean-forward="true" selection-start-line="155" selection-start-column="13" selection-end-line="155" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/server_config/gunicorn/gunicorn_start.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="23" lean-forward="true" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="51">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/server_config/services/fabricon-backend.service">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/server_config/nginx_config/development">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="677">
+          <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
         </state>
       </provider>
     </entry>
