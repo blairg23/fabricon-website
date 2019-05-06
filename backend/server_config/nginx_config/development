@@ -11,69 +11,107 @@
 # Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
 ##
 
-# Default server configuration
-#
-upstream dev.fabricon.com {
-	# server 127.0.0.1:8000;
-	server unix:/var/www/html/fabricon-website/backend/run/gunicorn.sock fail_timeout=10s;
+
+worker_processes 1;
+
+user nobody nogroup;
+# 'user nobody nobody;' for systems with 'nobody' as a group instead
+error_log  /var/log/nginx/error.log warn;
+pid /var/run/nginx.pid;
+
+events {
+  worker_connections 1024; # increase if you have lots of clients
+  accept_mutex off; # set to 'on' if nginx worker_processes > 1
+  # 'use epoll;' to enable for Linux 2.6+
+  # 'use kqueue;' to enable for FreeBSD, OSX
 }
 
-server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
-    server_name dev.fabricon.com;
+http {
+    inclue mime.types;
+    # fallback in case we can't determine a type
+    default_type application/octet-stream;
+    access_log /var/log/nginx/access.log combined;
+    sendfile on;
 
-    access_log /var/www/html/logs/nginx-access.log;
-    error_log /var/www/html/logs/nginx-error.log warn;
+    # Default server configuration
+    #
+    upstream dev.fabricon.com {
+        # fail_timeout=0 means we always retry an upstream even if it failed
+        # to return a good HTTP response
 
-    location /static/ {
-        autoindex on;
-        alias /var/www/html/fabricon-website/backend/static/;
+        # for UNIX domain socket setups
+        server unix:/tmp/gunicorn.sock fail_timeout=0;
+
+        # for a TCP configuration
+        # server 192.168.0.7:8000 fail_timeout=0;
     }
 
-    location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		# try_files $uri $uri/ /index.html =404;
+    server {
+        # if no Host match, close the connection to prevent host spoofing
+        listen 80 default_server;
+        return 444;
+    }
 
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header Host $http_host;
-        proxy_redirect off;
+    server {
+        listen 80;
+        listen [::]:80 default_server;
 
-        if (!-f $request_filename) {
-            proxy_pass http://dev.fabricon.com;
-            break;
+        # set the correct host(s) for your site
+        server_name dev.fabricon.com;
+
+        keepalive_timeout 5;
+
+        # path for static files
+        root /var/www/html/fabricon-website/backend/static;
+
+        access_log /var/log/nginx/access.log;
+        # error_log /var/www/html/logs/nginx-error.log warn;
+
+        # location /static/ {
+        #    autoindex on;
+        #    alias /var/www/html/fabricon-website/backend/static/;
+        # }
+
+        location / {
+            # First attempt to serve request as file, then
+            # as directory, then fall back to displaying a 404.
+            try_files $uri $uri/ /index.html @proxy_to_app; =404;
         }
-	}
 
-	# root /var/www/html/fabricon-website/backend;
+        location @proxy_to_app {
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header Host $http_host;
+            proxy_redirect off;
+            proxy_pass http://dev.fabricon.com;
+        }
 
-	# For favicon
-	location /favicon.ico {
-	    alias /var/www/html/fabricon-website/static/img/favicon.ico;
-	}
+        # For favicon
+        location /favicon.ico {
+            alias /var/www/html/fabricon-website/static/img/favicon.ico;
+        }
 
-	# Add index.php to the list if you are using PHP
-	index index.html index.htm index.nginx-debian.html;
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
 
-    location /admin/ {
-            include /etc/nginx/uwsgi_params;
-            uwsgi_pass unix:/var/run/django.socket;
-            uwsgi_request_buffering on;
-            uwsgi_send_timeout 600s;
-            uwsgi_read_timeout 600s;
-            uwsgi_pass_request_headers on;
+        location /admin/ {
+                include /etc/nginx/uwsgi_params;
+                uwsgi_pass unix:/var/run/django.socket;
+                uwsgi_request_buffering on;
+                uwsgi_send_timeout 600s;
+                uwsgi_read_timeout 600s;
+                uwsgi_pass_request_headers on;
+        }
+
+        # For robots.txt
+        # location  /robots.txt {
+        #     alias /var/www/test/test/static/robots.txt ;
+        # }
+        # Error pages
+        # error_page 500 502 503 504 /500.html;
+        # location = /500.html {
+        #     root /var/www/html/fabricon-website/backend/static/;
+        # }
     }
-
-    # For robots.txt
-    # location  /robots.txt {
-    #     alias /var/www/test/test/static/robots.txt ;
-    # }
-    # Error pages
-    # error_page 500 502 503 504 /500.html;
-    # location = /500.html {
-    #     root /var/www/html/fabricon-website/backend/static/;
-    # }
 }
-
 

@@ -4,6 +4,7 @@ Description=Fabricon gunicorn daemon
 [Service]
 # EnvironmentFile=-/etc/environment
 # WorkingDirectory=/root/fabricon-website/backend/
+PIDFile=/run/gunicorn/pid
 Type=simple
 User=root
 ExecStart=/var/www/html/fabricon-website/backend/server_config/gunicorn/gunicorn_start.sh
