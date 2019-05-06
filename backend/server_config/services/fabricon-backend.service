@@ -7,7 +7,7 @@ Description=Fabricon gunicorn daemon
 Type=simple
 User=root
 ExecStart=/var/www/html/fabricon-website/backend/server_config/gunicorn/gunicorn_start.sh
-Restart=always
+# Restart=always
 
 [Install]
 WantedBy=multi-user.target
